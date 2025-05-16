@@ -48,8 +48,8 @@ class Administrativo(MiembroUniversitario):
   def consultar_informacion(self):
     print(f"Personal Administrativo: {self.nombre}, Departamento: {self.departamento}")
 
-  def trabajar_en_su_departamento(self):
-    print(f"El personal administrativo {self.nombre} está trabajando en su departamento")
+  def gestionar_documentos(self):
+    print(f"El personal administrativo {self.nombre} está gestionando documentos en el departamento de {self.departamento}.")
 
 estudiante = Estudiante("Miguel", 22, "miguel@email.com", "Ingeniería de Sistemas")
 profesor = Profesor("Dr. López", 45, "lopez@email.com", "Informática")
@@ -62,4 +62,8 @@ administrativo.consultar_informacion()
 estudiante.recibir_mensaje("Tienes una nueva tarea pendiente.")
 profesor.recibir_mensaje("Revisión de exámenes programada.")
 administrativo.recibir_mensaje("Reunión administrativa el viernes.")
+
+estudiante.anotar_clase()
+profesor.impartir_clase()
+administrativo.gestionar_documentos()
 
